@@ -12,6 +12,12 @@
 		12177F8520F7427E0062B4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177F8320F7427E0062B4EC /* Main.storyboard */; };
 		12177F8720F742800062B4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12177F8620F742800062B4EC /* Assets.xcassets */; };
 		12177F8A20F742800062B4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177F8820F742800062B4EC /* LaunchScreen.storyboard */; };
+		12177F9420F7439C0062B4EC /* CardArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177F9320F7439C0062B4EC /* CardArticle.swift */; };
+		12177F9620F7454A0062B4EC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177F9520F7454A0062B4EC /* Card.swift */; };
+		12177F9820F747410062B4EC /* CardContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177F9720F747410062B4EC /* CardContentViewController.swift */; };
+		12177F9A20F747CF0062B4EC /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177F9920F747CF0062B4EC /* LayoutHelper.swift */; };
+		12177F9C20F749EC0062B4EC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177F9B20F749EC0062B4EC /* DetailViewController.swift */; };
+		12177F9E20F74A390062B4EC /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177F9D20F74A390062B4EC /* Animator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		12177F8620F742800062B4EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12177F8920F742800062B4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12177F8B20F742800062B4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12177F9320F7439C0062B4EC /* CardArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardArticle.swift; sourceTree = "<group>"; };
+		12177F9520F7454A0062B4EC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		12177F9720F747410062B4EC /* CardContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentViewController.swift; sourceTree = "<group>"; };
+		12177F9920F747CF0062B4EC /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
+		12177F9B20F749EC0062B4EC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		12177F9D20F74A390062B4EC /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				12177F8620F742800062B4EC /* Assets.xcassets */,
 				12177F8820F742800062B4EC /* LaunchScreen.storyboard */,
 				12177F8B20F742800062B4EC /* Info.plist */,
+				12177F9320F7439C0062B4EC /* CardArticle.swift */,
+				12177F9520F7454A0062B4EC /* Card.swift */,
+				12177F9720F747410062B4EC /* CardContentViewController.swift */,
+				12177F9920F747CF0062B4EC /* LayoutHelper.swift */,
+				12177F9B20F749EC0062B4EC /* DetailViewController.swift */,
+				12177F9D20F74A390062B4EC /* Animator.swift */,
 			);
 			path = appStoreCard;
 			sourceTree = "<group>";
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12177F9820F747410062B4EC /* CardContentViewController.swift in Sources */,
+				12177F9A20F747CF0062B4EC /* LayoutHelper.swift in Sources */,
 				12177F8220F7427E0062B4EC /* ViewController.swift in Sources */,
 				12177F8020F7427E0062B4EC /* AppDelegate.swift in Sources */,
+				12177F9E20F74A390062B4EC /* Animator.swift in Sources */,
+				12177F9420F7439C0062B4EC /* CardArticle.swift in Sources */,
+				12177F9620F7454A0062B4EC /* Card.swift in Sources */,
+				12177F9C20F749EC0062B4EC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = appStoreCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = appStoreCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

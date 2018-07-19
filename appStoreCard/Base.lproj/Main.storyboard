@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,131 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="appStoreCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DiK-NQ-vwP" customClass="CardArticle" customModule="appStoreCard" customModuleProvider="target">
+                                <rect key="frame" x="82" y="97" width="210" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Tap"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="monument_valley_5k-1920x1080"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="To know more"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cardRadius">
+                                        <real key="value" value="31"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="contentInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="customView" destination="DiK-NQ-vwP" id="f4D-Em-ead"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-3820" y="-203"/>
+        </scene>
+        <!--Card Content View Controller-->
+        <scene sceneID="qOg-mj-TrU">
+            <objects>
+                <viewController storyboardIdentifier="CardContent" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TIB-zT-HqI" customClass="CardContentViewController" customModule="appStoreCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="BVd-cZ-nCz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHD-oc-yOn">
+                                <rect key="frame" x="16" y="66" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="YtM-9r-7xZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="725e5dc00ba49c240cd489e7b87e0496--city-background-flappy-bird" translatesAutoresizingMaskIntoConstraints="NO" id="GkG-M4-c2t">
+                                <rect key="frame" x="0.0" y="146" width="375" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GkG-M4-c2t" secondAttribute="height" multiplier="31:9" id="ZoZ-lB-g5R"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psd-WK-ECi">
+                                <rect key="frame" x="16" y="270.5" width="343" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="nBJ-8C-6Ch"/>
+                                </constraints>
+                                <string key="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-UJ-wGA">
+                                <rect key="frame" x="0.0" y="460.5" width="375" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="9ld-nT-nRX"/>
+                                </constraints>
+                                <state key="normal" title="Do some magic ✨✨ "/>
+                                <connections>
+                                    <action selector="doMagic:" destination="TIB-zT-HqI" eventType="touchUpInside" id="alU-hl-Qpp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Demo !!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chd-pI-u7O">
+                                <rect key="frame" x="16" y="26" width="343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bWU-ds-N9g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7yO-Rc-4SF" firstAttribute="trailing" secondItem="SHD-oc-yOn" secondAttribute="trailing" constant="16" id="0dW-fc-swb"/>
+                            <constraint firstItem="GkG-M4-c2t" firstAttribute="trailing" secondItem="7yO-Rc-4SF" secondAttribute="trailing" id="2GV-tz-CHS"/>
+                            <constraint firstItem="GkG-M4-c2t" firstAttribute="leading" secondItem="7yO-Rc-4SF" secondAttribute="leading" id="98G-kq-xLD"/>
+                            <constraint firstItem="HLM-UJ-wGA" firstAttribute="top" secondItem="Psd-WK-ECi" secondAttribute="bottom" constant="25" id="Ahu-n2-tb7"/>
+                            <constraint firstItem="Psd-WK-ECi" firstAttribute="top" secondItem="GkG-M4-c2t" secondAttribute="bottom" constant="16" id="GQl-nf-U7h"/>
+                            <constraint firstItem="7yO-Rc-4SF" firstAttribute="trailing" secondItem="HLM-UJ-wGA" secondAttribute="trailing" id="H3X-aK-fAZ"/>
+                            <constraint firstItem="GkG-M4-c2t" firstAttribute="top" secondItem="SHD-oc-yOn" secondAttribute="bottom" constant="15" id="KPw-tv-Xk2"/>
+                            <constraint firstItem="Psd-WK-ECi" firstAttribute="leading" secondItem="7yO-Rc-4SF" secondAttribute="leading" constant="16" id="TQV-g0-Kao"/>
+                            <constraint firstItem="chd-pI-u7O" firstAttribute="leading" secondItem="7yO-Rc-4SF" secondAttribute="leading" constant="16" id="f3E-EP-VRU"/>
+                            <constraint firstItem="7yO-Rc-4SF" firstAttribute="trailing" secondItem="Psd-WK-ECi" secondAttribute="trailing" constant="16" id="m3D-9J-jNe"/>
+                            <constraint firstItem="7yO-Rc-4SF" firstAttribute="trailing" secondItem="chd-pI-u7O" secondAttribute="trailing" constant="16" id="mPa-WX-UGA"/>
+                            <constraint firstItem="chd-pI-u7O" firstAttribute="top" secondItem="7yO-Rc-4SF" secondAttribute="top" constant="6" id="ncz-wd-JVz"/>
+                            <constraint firstItem="SHD-oc-yOn" firstAttribute="top" secondItem="chd-pI-u7O" secondAttribute="bottom" constant="5" id="nvC-5M-Zui"/>
+                            <constraint firstItem="SHD-oc-yOn" firstAttribute="leading" secondItem="7yO-Rc-4SF" secondAttribute="leading" constant="16" id="t7J-Xi-KdX"/>
+                            <constraint firstItem="HLM-UJ-wGA" firstAttribute="leading" secondItem="7yO-Rc-4SF" secondAttribute="leading" id="xSy-vh-dbZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7yO-Rc-4SF"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbP-tP-ZzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4732" y="-202"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="725e5dc00ba49c240cd489e7b87e0496--city-background-flappy-bird" width="638" height="678"/>
+        <image name="monument_valley_5k-1920x1080" width="1920" height="1080"/>
+    </resources>
 </document>
